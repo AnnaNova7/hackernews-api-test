@@ -31,9 +31,12 @@ Items
 Comments
 - Retrieves the first comment of a top story
 - Handles invalid or missing comment IDs
+Reliability
+- Handles multiple rapid requests consistently (load testing)
+- Validates schema on repeated calls
 
 Result:
-✅ 7 tests executed successfully  
+✅ 13 tests executed successfully  
 ✅ 100% test coverage across all modules 
 
 🔍 Edge Cases Tested:
@@ -41,6 +44,7 @@ Invalid IDs (-1, "abc", very large number)
 Nonexistent items (API returns null instead of error)
 Empty/invalid comment parent IDs
 Top stories exceeding limit length
+Multiple back-to-back API calls
 
 🐞 Bugs Found:
 Inconsistent error handling:
